@@ -1,0 +1,146 @@
+.services{
+    left: 72px;
+    width: calc(100%-72px);
+    height: fit-content;
+    display: grid;
+    text-align: center;
+    vertical-align: center;
+    gap: 1rem;
+    grid-template-areas: 
+        'one one one one'
+        'one one one one'
+        'two two four four'
+        'two two four four'
+        'three three five five'
+        'three three five five';
+    font-family: "Source Sans Pro", sans-serif;
+    background:var(--body-color);
+    color: var(--font-color);
+    font-size: var(--font-size);
+    padding: 20px 20px 20px 20px;
+}
+.services .component img{
+    width: 30vw;
+    height: 20vw;
+    border-radius: 25px;
+    background-color:black;
+    filter:grayscale(100%);
+    transition: all .5s ease-in-out;
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: .5s ease-in-out;
+    -moz-filter: grayscale(100%); 
+    -moz-transition: .5s ease-in-out;
+    -o-filter: grayscale(100%); 
+    -o-transition: .5s ease-in-out;
+}
+
+.services .component img:hover{
+    -webkit-filter: grayscale(0%);
+    -webkit-transition: .5s ease-in-out;
+    -moz-filter: grayscale(0%);
+    -moz-transition: .5s ease-in-out;
+    -o-filter: grayscale(0%);
+    -o-transition: .5s ease-in-out;
+    filter:grayscale(0%);
+    transform:scale(1.03);
+    transition: all .5s ease-in-out;
+}
+
+.services .component .textBox{
+    position: absolute;
+    width: 100%;
+    font-size: 1.5rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.services .component:nth-child(1){
+    grid-area: one;
+    font-size: clamp(3rem, 3.5vw, 5rem);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.services .firstChild{
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.services .component:nth-child(2){
+    grid-area: two;
+    text-align: right;
+}
+
+.services .component:nth-child(2) .textBox{
+    bottom: 0;
+    right: 15px;
+}
+
+.services .component:nth-child(3){
+    grid-area: three;
+    text-align: right;
+}
+
+.services .component:nth-child(3) .textBox{
+    top: 5px;
+    right: 15px;
+}
+
+.services .component:nth-child(4){
+    grid-area: four;
+    text-align: left;
+}
+
+.services .component:nth-child(4) .textBox{
+    bottom: 0;
+    left: 15px;
+}
+
+.services .component:nth-child(5){
+    grid-area: five;
+    text-align: left;
+}
+
+.services .component:nth-child(5) .textBox{
+    top: 5px;
+    left: 15px;
+}
+
+.services .reveal{
+    position: relative;
+    transform: translateY(30%);
+    opacity: 0;
+    transition: all var(--speed) ease;
+}
+
+.services .reveal.revealed{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.services button{
+    width: fit-content;
+    background:transparent;
+    border: 0px;
+}
+
+@media(max-width: 50em){
+    .services{
+        grid-template-areas: 
+        'one'
+        'two'
+        'three'
+        'four'
+        'five';
+    }
+
+    
+    .services .component img{
+        width: 100%;
+        height: 50vw;
+    }
+
+    .services .component:nth-child(1){
+        font-size: 6vw;
+    }
+}

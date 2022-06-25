@@ -1,0 +1,146 @@
+.about_us {
+    left: 72px;
+    width: calc(100%-72px);
+    display:grid;
+    text-align: justify;
+    gap: 20px;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+        'one one one one'
+        'one one one one'
+        'two two three three'
+        'two two three three'
+        'four four five six'
+        'seven seven eight eight';
+    font-family: "Source Sans Pro", sans-serif;
+    background:var(--body-color);
+    color: var(--font-color);
+    font-size: var(--font-size);
+    padding: 20px 20px 20px 20px;
+}
+
+.sidebar.active ~ .about_us{
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+.grid-col-span-2{
+    grid-column: span 2;
+}
+
+.grid-col-span-row-span-2{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid-col-span-2-row-span-4{
+    grid-row: span 4;
+    grid-row: span 2;
+}
+
+.grid-col-span-4{
+    grid-column: span 4;
+}
+
+.about_us .component{
+    display: flex;
+    border-radius: 25px;
+    line-height: 1.6;
+}
+
+.about_us .component p{
+    padding: 10px 15px 10px 15px;
+}
+
+.about_us .component img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.about_us .component:nth-child(1){
+    grid-area: one;
+    font-size: clamp(2rem, 2.5vw, 4rem);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+
+.about_us .component:nth-child(2){
+    grid-area: two;
+}
+
+.about_us .component:nth-child(3){
+    grid-area: three;
+    background: #353535;
+}
+
+.about_us .component:nth-child(4){
+    grid-area: four;
+    background: #454545;
+}
+
+.about_us .component:nth-child(5){
+    grid-area: five;
+}
+
+.about_us .component:nth-child(6){
+    grid-area: six;
+}
+
+.about_us .component:nth-child(7){
+    grid-area: seven;
+}
+
+.about_us .component:nth-child(8){
+    grid-area: eight;
+    background: #555555;
+}
+
+.about_us .reveal{
+    position: relative;
+    transform: translateY(30%);
+    opacity: 0;
+    transition: all var(--speed) ease;
+}
+
+.about_us .reveal.revealed{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media screen and (max-width: 50em){
+    .about_us{
+        left:0;
+        width: 100%;
+        grid-template-areas: 
+        'one'
+        'two'
+        'three'
+        'four'
+        'five'
+        'six'
+        'seven'
+        'eight';
+    }
+    .about_us .component:first-child{
+        font-size: 4vw;
+    }
+
+    .about_us .component:nth-child(3),
+    .about_us .component:nth-child(4),
+    .about_us .component:nth-child(8) {
+        font-size: 3vw;
+    }
+
+    .about_us .component:nth-child(2),
+    .about_us .component:nth-child(5),
+    .about_us .component:nth-child(6),
+    .about_us .component:nth-child(7){
+        width: 100%;
+        height: fit-content;
+    }
+
+}

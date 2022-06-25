@@ -1,0 +1,20 @@
+footer{
+    width: calc(100%-72px);
+    background: #606060;
+    color: var(--font-color);
+    padding: 5% 2% 2% 2%;
+    line-height: 1.5;
+    display: flex;
+    font-size: var(--font-size);
+}
+
+footer .alairas{
+    margin-left: auto;
+}
+
+@media screen and (max-width: 50em){
+    footer{
+        font-size: 2vw;
+    }
+
+}

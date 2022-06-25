@@ -1,0 +1,41 @@
+:root{
+    --speed: 3s;
+    --body-color: black;
+    --font-color: #FFF;
+    --font-size:clamp(0.3rem, 1vw, 1.5rem);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #3A3B3C; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+html{
+    scroll-behavior: smooth;
+    background: var(--body-color);
+    color: var(--font-color);
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.btn-primary{
+    border: 5px solid violet;
+}

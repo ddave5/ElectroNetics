@@ -1,0 +1,21 @@
+.modal-dialog{
+    background: var(--body-color);
+    color: var(--font-color);
+}
+
+.modal-dialog .modal-header{
+    background: var(--body-color);
+    height: 20%;
+}
+
+.modal-dialog .modal-body{
+    background:var(--body-color);
+}
+
+.modal-dialog .modal-footer{
+    background:var(--body-color);
+}
+
+.modal-dialog .btn-close{
+    color: violet;
+}
