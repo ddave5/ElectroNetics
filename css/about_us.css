@@ -50,6 +50,11 @@
 
 .about_us .component p{
     padding: 10px 15px 10px 15px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .about_us .component img{
@@ -60,12 +65,14 @@
 
 .about_us .component:nth-child(1){
     grid-area: one;
-    font-size: clamp(2rem, 2.5vw, 4rem);
+    font-size: 44px;
     text-align: center;
-    align-items: center;
     justify-content: center;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
+    margin: 5rem 0;
+}
+
+.about_us .component:nth-child(1) p {
+    font-size: 30px;
 }
 
 .about_us .component:nth-child(2){
@@ -125,21 +132,26 @@
         'seven'
         'eight';
     }
+
+    .about_us .component{
+        margin: 16px
+    }
+
     .about_us .component:first-child{
-        font-size: 4vw;
+        font-size: 2rem;
     }
 
     .about_us .component:nth-child(3),
     .about_us .component:nth-child(4),
     .about_us .component:nth-child(8) {
-        font-size: 3vw;
+        font-size: 1rem;
     }
 
     .about_us .component:nth-child(2),
     .about_us .component:nth-child(5),
     .about_us .component:nth-child(6),
     .about_us .component:nth-child(7){
-        width: 100%;
+        width: calc(100%-16px);
         height: fit-content;
     }
 

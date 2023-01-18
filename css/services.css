@@ -1,23 +1,11 @@
 .services{
     left: 72px;
     width: calc(100%-72px);
-    height: fit-content;
-    display: grid;
-    text-align: center;
-    vertical-align: center;
-    gap: 1rem;
-    grid-template-areas: 
-        'one one one one'
-        'one one one one'
-        'two two four four'
-        'two two four four'
-        'three three five five'
-        'three three five five';
-    font-family: "Source Sans Pro", sans-serif;
     background:var(--body-color);
     color: var(--font-color);
     font-size: var(--font-size);
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
+    margin: 10rem 0;
 }
 .services .component img{
     width: 30vw;
@@ -51,14 +39,22 @@
     width: 100%;
     font-size: 1.5rem;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    bottom: 8px;
+    left: 16px;
 }
 
-.services .component:nth-child(1){
-    grid-area: one;
+.services .component_container{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    width: inherit;
+}
+
+.services .component .title{
     font-size: clamp(3rem, 3.5vw, 5rem);
     text-align: center;
-    align-items: center;
-    justify-content: center;
+    margin: 3rem 0;
 }
 
 .services .firstChild{
@@ -66,51 +62,15 @@
     margin-bottom: 3vw;
 }
 
-.services .component:nth-child(2){
-    grid-area: two;
-    text-align: right;
-}
-
-.services .component:nth-child(2) .textBox{
-    bottom: 0;
-    right: 15px;
-}
-
-.services .component:nth-child(3){
-    grid-area: three;
-    text-align: right;
-}
-
-.services .component:nth-child(3) .textBox{
-    top: 5px;
-    right: 15px;
-}
-
-.services .component:nth-child(4){
-    grid-area: four;
-    text-align: left;
-}
-
-.services .component:nth-child(4) .textBox{
-    bottom: 0;
-    left: 15px;
-}
-
-.services .component:nth-child(5){
-    grid-area: five;
-    text-align: left;
-}
-
-.services .component:nth-child(5) .textBox{
-    top: 5px;
-    left: 15px;
-}
-
 .services .reveal{
     position: relative;
     transform: translateY(30%);
     opacity: 0;
     transition: all var(--speed) ease;
+}
+
+.services .reveal button{
+    border: 0;
 }
 
 .services .reveal.revealed{
@@ -121,26 +81,28 @@
 .services button{
     width: fit-content;
     background:transparent;
-    border: 0px;
 }
 
 @media(max-width: 50em){
-    .services{
-        grid-template-areas: 
-        'one'
-        'two'
-        'three'
-        'four'
-        'five';
+
+    .services .component_container {
+        flex-direction: column;
     }
 
-    
+    .services .component .title {
+        font-size: 2rem;
+    }
+
+    .services .component p{
+        font-size: 2rem;
+    }
+
     .services .component img{
         width: 100%;
         height: 50vw;
     }
 
-    .services .component:nth-child(1){
-        font-size: 6vw;
+    .services .component .textBox p{
+        font-size: 1rem;
     }
 }

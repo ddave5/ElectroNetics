@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Inter:wght@300;400;500;600&display=swap');
+
 :root{
     --speed: 3s;
     --body-color: black;
     --font-color: #FFF;
-    --font-size:clamp(0.3rem, 1vw, 1.5rem);
+    --font-size:16px;
 }
 
 ::-webkit-scrollbar {
@@ -26,6 +28,10 @@
             box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
+*{
+    font-family: 'Inter', sans-serif;
+}
+
 html{
     scroll-behavior: smooth;
     background: var(--body-color);
@@ -38,4 +44,9 @@ body{
 
 .btn-primary{
     border: 5px solid violet;
+}
+
+li{
+    list-style-type: none;
+    
 }

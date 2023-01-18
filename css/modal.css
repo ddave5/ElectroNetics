@@ -1,21 +1,134 @@
-.modal-dialog{
+.modal-dialog {
     background: var(--body-color);
     color: var(--font-color);
 }
 
-.modal-dialog .modal-header{
+.modal-dialog .modal-header {
     background: var(--body-color);
     height: 20%;
 }
 
-.modal-dialog .modal-body{
+.modal-dialog .modal-body {
     background:var(--body-color);
 }
 
-.modal-dialog .modal-footer{
+.modal-dialog .modal-footer {
     background:var(--body-color);
 }
 
-.modal-dialog .btn-close{
+.modal-dialog .btn-close {
     color: violet;
+}
+
+.modal-header {
+    top: auto;
+}
+
+.modal-body {
+    height: 100vh;
+}
+
+.modal-body .modal_navbar_elements {
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    margin: 10px 0 3rem 0;
+}
+
+.modal-body .modal_navbar_elements span {
+    background: white;
+    color: var(--body-color);
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.modal-body .modal_card_container .ipari_element_card,
+.modal-body .modal_card_container .lakossagi_element_card {
+    display: none;
+}
+
+.modal-body .modal_card_container .ipari_element_card.aktiv,
+.modal-body .modal_card_container .lakossagi_element_card.aktiv {
+    display: block;
+    padding: 1rem;
+    height: 100%;
+}
+
+.modal-body .modal_card_container .ipari_element_card .title,
+.modal-body .modal_card_container .lakossagi_element_card .title {
+    font-size: 22px;
+}
+
+.modal-body .modal_card_container .ipari_element_card .content,
+.modal-body .modal_card_container .lakossagi_element_card .content {
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+}
+
+.modal-body .modal_card_container .ipari_element_card .content .content_card,
+.modal-body .modal_card_container .lakossagi_element_card .content .content_card {
+    flex: 1 0 21%; /* explanation below */
+    border-radius: 8px;
+    min-height: 300px;
+
+}
+
+.modal-body .modal_card_container .ipari_element_card .content .content_card .content_header,
+.modal-body .modal_card_container .lakossagi_element_card .content .content_card .content_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,82,1) 60%);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.modal-body .modal_card_container .ipari_element_card .content .content_card .content_header p,
+.modal-body .modal_card_container .lakossagi_element_card .content .content_card .content_header p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.modal-body .modal_card_container .ipari_element_card .content .content_card .content_list,
+.modal-body .modal_card_container .lakossagi_element_card .content .content_card .content_list {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.modal-body .modal_card_container .ipari_element_card .content ul,
+.modal-body .modal_card_container .lakossagi_element_card .content ul {
+    padding-left: 0;
+    width: 100%;
+}
+
+.modal-body .modal_card_container .ipari_element_card .content li,
+.modal-body .modal_card_container .lakossagi_element_card .content li {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,5,82,1) 60%);
+    margin:8px 0;
+    border-radius: 8px;
+    padding:8px;
+    text-align: center;
+}
+
+.modal-body .modal_card_container .lakossagi_element_card .content .ertesitoMessage {
+    background: var(--font-color);
+    color: var(--body-color);
+    font-size: 18px;
+    border-radius: 16px;
+    padding: 8px;
+    text-align: center;
+}
+
+@media(max-width: 50em){
+    .modal-body .modal_navbar_elements {
+        flex-direction: column;
+    }
 }

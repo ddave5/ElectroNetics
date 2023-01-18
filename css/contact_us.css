@@ -1,5 +1,5 @@
 #contact_us{
-    width: calc(100%-72px);
+    width: calc(100% - 72px);
     background: var(--body-color);
     color: var(--font-color);
     font-size: var(--font-size);
@@ -16,7 +16,7 @@
 
 #contact_us .footer-top{
     display: flex;
-
+    justify-content: space-between;
 }
 
 #contact_us .footer-top .cim{

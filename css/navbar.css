@@ -183,36 +183,44 @@
 }
 
 @media screen and (max-width: 70em){
-    .sidebar{
+    .sidebar {
         position: fixed;
         height: 7vh;
         background-color: transparent;
         background: transparent;
     }
 
-    .sidebar.active{
+    .sidebar.active {
         width: 100vw;
         height: 100%;
         background: linear-gradient(#000000, #393939);
     }
 
-    .sidebar #navbar_menu_button{
-        color: #00A19C;
-    }
-
-    .sidebar ul li a{
-        opacity: 0;
-    }
-
-    .sidebar.active ul li a{
-        opacity: 1;
-    }
-
-    .sidebar ul li .tooltip{
+    .sidebar .nav_list {
         display: none;
     }
 
-    .sidebar.active ~ .home{
+    .sidebar.active .nav_list {
+        display: block;
+    }
+
+    .sidebar #navbar_menu_button {
+        color: #00A19C;
+    }
+
+    .sidebar ul li a {
+        opacity: 0;
+    }
+
+    .sidebar.active ul li a {
+        opacity: 1;
+    }
+
+    .sidebar ul li .tooltip {
+        display: none;
+    }
+
+    .sidebar.active ~ .home {
         opacity: 0;
     }
 
