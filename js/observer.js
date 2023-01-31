@@ -6,7 +6,7 @@ function reveal(){
     reveals.forEach(reveal => {
         var windowheight = window.innerHeight;
         var revealTop = reveal.getBoundingClientRect().top;
-        var revealpoint = 40;
+        var revealpoint = 10;
 
         if (revealTop < windowheight - revealpoint){
             reveal.classList.add('revealed');
